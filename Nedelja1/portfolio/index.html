@@ -88,8 +88,12 @@
             У слободно време играм фудбал рекреативно.
           </p>
         </div>
-        <button type="button" class="downloadCVButton" onclick="downloadCV()">
-          Сачувај CV
+        <button
+          type="button"
+          class="downloadCVButton"
+          onclick="window.open('assets/cv.pdf')"
+        >
+          Погледај CV
         </button>
         <div class="navbar2">
           <p class="nameParagraph">Ненад Абрамовић</p>
@@ -150,6 +154,7 @@
           <img src="assets/images/bootcampPizzaImg.png" alt="" />
         </div>
         <div class="projectDescription">
+          <h2>Опис пројекта</h2>
           <p>Први пројекат</p>
         </div>
         <div class="navbar3">
@@ -169,26 +174,34 @@
       ></div>
       <section class="contact" id="contact">
         <h2 class="contactHeading">Контакт</h2>
-        <p>Овде ће се налазити контакт информације.</p>
-        <div
-          class="LI-profile-badge"
-          data-version="v1"
-          data-size="medium"
-          data-locale="en_US"
-          data-type="horizontal"
-          data-theme="dark"
-          data-vanity="ненад-абрамовић-99a88118b"
+        <form
+          action="mailto:nenadabramovic@outlook.com"
+          method="post"
+          enctype="text/plain"
         >
-          <a
-            class="LI-simple-link"
-            href="https://rs.linkedin.com/in/%D0%BD%D0%B5%D0%BD%D0%B0%D0%B4-%D0%B0%D0%B1%D1%80%D0%B0%D0%BC%D0%BE%D0%B2%D0%B8%D1%9B-99a88118b?trk=profile-badge"
-            >Ненад Абрамовић</a
-          >
-        </div>
-        <ul>
-          <li>Мејл:</li>
-          <li>Телефон:</li>
-        </ul>
+          <div>
+            <label for="ime">Ваше име: </label><br />
+            <input
+              type="text"
+              name="ime"
+              id="ime"
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <div>
+            <label for="message">Ваша порука: </label> <br />
+            <textarea
+              name="message"
+              id="message"
+              cols="5"
+              rows="3"
+              placeholder="Унесите поруку..."
+            ></textarea>
+          </div>
+          <div class="submitButton">
+            <input type="submit" value="Пошаљи поруку" />
+          </div>
+        </form>
       </section>
     </main>
     <footer>
@@ -204,12 +217,6 @@
         </nav>
       </div>
     </footer>
-    <script
-      type="text/javascript"
-      src="https://platform.linkedin.com/badges/js/profile.js"
-      async
-      defer
-    ></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -62,19 +62,25 @@ body.onwheel = event => {
   }
 };
 
-const img = document.querySelectorAll(".projects img");
-const sectionProjects = document.querySelector(".projects");
+let projectDescriptions = {
+  "bootcampPizzaImg.png": "Први пројекат",
+
+  "facebookImg.png": "Плејсхолдер 1",
+  "instagramImg.png": "Плејсхолдер 3",
+  "twitterImg.png": "Плејсхолдер 2",
+  "youtubeImg.png": "Плејсхолдер 4"
+};
+
+const img = document.querySelectorAll(".projectsList img");
+const projectPreview = document.querySelector(".previewProject img");
+const projectDesc = document.querySelector(".projectDescription p");
+console.log(projectPreview);
 [...img].forEach(image => {
   image.onmouseover = () => {
     let url = image.src.substring(image.src.lastIndexOf("/") + 1);
-    sectionProjects.style.backgroundImage = "url(" + url + ")";
-    sectionProjects.style.backgroundSize = "100vw 100vh";
-    sectionProjects.style.backgroundColor = "rgba(100, 100, 100, 0.825)";
-  };
-});
-[...img].forEach(image => {
-  image.onmouseleave = () => {
-    sectionProjects.style.backgroundImage = "";
+    console.log(url);
+    projectPreview.src = "assets/images/" + url;
+    projectDesc.innerHTML = projectDescriptions[url];
   };
 });
 
@@ -89,7 +95,3 @@ function time() {
   }, 500);
 }
 time();
-
-function downloadCV() {
-  alert("Једног дана ће овде бити CV");
-}

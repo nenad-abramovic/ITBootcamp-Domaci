@@ -242,6 +242,14 @@ body {
   border: 2px solid rgb(89, 145, 228);
   border-radius: 10px;
 }
+
+.projectDescription h2 {
+  margin: 10px;
+}
+.projectDescription p {
+  text-align: left;
+}
+
 .previewProject img {
   height: 100%;
   margin: 0 auto;
@@ -272,14 +280,52 @@ body {
   background-color: rgb(89, 145, 228);
   height: 100vh;
   color: white;
+  text-align: center;
 }
 
 .contactHeading {
-  text-align: center;
   padding: 10px;
   font-size: 300%;
   margin: 10px;
   margin-top: 0;
   margin-bottom: 30px;
   border-bottom: 2px solid white;
+}
+
+.contact div {
+  width: 50vw;
+  margin: 0 auto;
+  text-align: left;
+  padding: 10px;
+}
+.contact label {
+  font-weight: bold;
+  font-size: 150%;
+  padding: 10px;
+}
+.contact input {
+  width: 440px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 120%;
+}
+.contact textarea {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 120%;
+  width: 440px;
+  height: 500px;
+}
+.submitButton {
+  width: fit-content;
+}
+.contact input[type="submit"] {
+  width: 220px;
+  background-color: rgb(145, 180, 231);
+  border: 2px solid rgb(67, 132, 230);
+  cursor: pointer;
+}
+
+.contact input[type="submit"]:hover {
+  background-color: rgb(187, 207, 236);
 }
