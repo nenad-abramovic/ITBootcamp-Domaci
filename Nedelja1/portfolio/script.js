@@ -1,3 +1,4 @@
+/* Navigation */
 const link = document.querySelectorAll("nav li");
 [...link].forEach(navigate);
 
@@ -19,40 +20,47 @@ function navigate(link, idx) {
     }
   });
 }
+/* ********* */
+/* Scrolling */
 
 body = document.querySelector("body");
 body.style.transition = "top, 2s";
 body.style.top = "0";
+
+function scrollPage(amount, pos) {
+  body.style.top = pos + amount + "%";
+}
+
 let count = 0;
 
 body.onwheel = event => {
   let pos = Number.parseInt(body.style.top);
   console.log(event.deltaY);
   count++;
-  if (count > 20) {
+  if (count > 10) {
     switch (pos) {
       case 0:
         if (event.deltaY > 0) {
-          body.style.top = pos - 200 + "%";
+          scrollPage(-200, pos);
         }
         break;
       case -200:
         if (event.deltaY > 0) {
-          body.style.top = pos - 200 + "%";
+          scrollPage(-200, pos);
         } else {
-          body.style.top = pos + 200 + "%";
+          scrollPage(200, pos);
         }
         break;
       case -400:
         if (event.deltaY > 0) {
-          body.style.top = pos - 300 + "%";
+          scrollPage(-300, pos);
         } else {
-          body.style.top = pos + 200 + "%";
+          scrollPage(200, pos);
         }
         break;
       case -700:
         if (event.deltaY < 0) {
-          body.style.top = pos + 300 + "%";
+          scrollPage(300, pos);
         }
         break;
       default:
@@ -62,8 +70,11 @@ body.onwheel = event => {
   }
 };
 
+/* *************** */
+/* Project preview */
 let projectDescriptions = {
-  "bootcampPizzaImg.png": "Први пројекат",
+  "bootcampPizzaImg.png":
+    "<p>Пројекат рађен на курсу Развој веб страница.</p><p>Коришћене технологије:</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li>",
 
   "facebookImg.png": "Плејсхолдер 1",
   "instagramImg.png": "Плејсхолдер 3",
@@ -73,17 +84,18 @@ let projectDescriptions = {
 
 const img = document.querySelectorAll(".projectsList img");
 const projectPreview = document.querySelector(".previewProject img");
-const projectDesc = document.querySelector(".projectDescription p");
+const projectDesc = document.querySelector(".projectDescription");
 console.log(projectPreview);
 [...img].forEach(image => {
   image.onmouseover = () => {
     let url = image.src.substring(image.src.lastIndexOf("/") + 1);
     console.log(url);
     projectPreview.src = "assets/images/" + url;
-    projectDesc.innerHTML = projectDescriptions[url];
+    projectDesc.innerHTML = "<h2>Опис пројекта</h2>" + projectDescriptions[url];
   };
 });
-
+/* ********************* */
+/* Clock on Welcome page */
 const headerTime = document.getElementsByClassName("headerTime");
 
 function time() {

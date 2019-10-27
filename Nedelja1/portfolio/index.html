@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <header class="header clearfix" id="start">
+    <header class="header clearfix">
       <div class="navbar">
         <p class="nameParagraph">Ненад Абрамовић</p>
         <nav class="navigation">
@@ -32,14 +32,16 @@
       <p class="headerParagraph">
         Скролуј наниже да сазнаш више о мени...
       </p>
-      <p class="headerFooterParagraph">Фронт енд ЈаваСкрипт веб девелопер</p>
-      <p class="headerTime">asd</p>
+      <footer class="footer clearfix topFooter">
+        <p class="headerFooterParagraph">Фронт енд ЈаваСкрипт веб девелопер</p>
+        <p class="headerTime">asd</p>
+      </footer>
     </header>
     <div
       style="height: 100vh; background-image: linear-gradient(to bottom, rgb(89, 145, 228), rgb(164, 205, 243));"
     ></div>
     <main>
-      <section class="basicInfo" id="aboutMe">
+      <section class="basicInfo clearfix" id="aboutMe">
         <h2 class="personalDataHeading">О мени</h2>
         <div>
           <p>
@@ -74,7 +76,7 @@
         <div>
           <p>
             Од малих ногу волим програмирање. У основној школи сам похађао курс
-            за талентовану децу школе Системпро.
+            програмирања школе Системпро.
           </p>
         </div>
         <div>
@@ -95,22 +97,24 @@
         >
           Погледај CV
         </button>
-        <div class="navbar2">
-          <p class="nameParagraph">Ненад Абрамовић</p>
-          <nav class="navigation">
-            <ul>
-              <li>Почетак</li>
-              <li>О мени</li>
-              <li>Пројекти</li>
-              <li>Контакт</li>
-            </ul>
-          </nav>
-        </div>
+        <footer>
+          <div class="navbar2">
+            <p class="nameParagraph">Ненад Абрамовић</p>
+            <nav class="navigation">
+              <ul>
+                <li>Почетак</li>
+                <li>О мени</li>
+                <li>Пројекти</li>
+                <li>Контакт</li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
       </section>
       <div
         style="height: 100vh; background-image: linear-gradient(to bottom, rgb(164, 205, 243), rgb(201, 225, 248));"
       ></div>
-      <section class="projects" id="projects">
+      <section class="projects clearfix" id="projects">
         <h1 class="projectHeading">Пројекти</h1>
         <div class="projectsList">
           <div>
@@ -143,36 +147,37 @@
             /></a>
             <h2>Јутјуб</h2>
           </div>
-          <div>
-            <a href="https://youtube.com"
-              ><img src="assets/images/youtubeImg.png" alt="Јутјуб"
-            /></a>
-            <h2>Јутјуб</h2>
-          </div>
         </div>
         <div class="previewProject">
           <img src="assets/images/bootcampPizzaImg.png" alt="" />
         </div>
         <div class="projectDescription">
           <h2>Опис пројекта</h2>
-          <p>Први пројекат</p>
+          <p><p>Пројекат рађен на курсу Развој веб страница.</p>
+          <p>Коришћене технологије:</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li></p>
         </div>
-        <div class="navbar3">
-          <p class="nameParagraph">Ненад Абрамовић</p>
-          <nav class="navigation">
-            <ul>
-              <li>Почетак</li>
-              <li>О мени</li>
-              <li>Пројекти</li>
-              <li>Контакт</li>
-            </ul>
-          </nav>
-        </div>
+        <footer>
+          <div class="navbar3">
+            <p class="nameParagraph">Ненад Абрамовић</p>
+            <nav class="navigation">
+              <ul>
+                <li>Почетак</li>
+                <li>О мени</li>
+                <li>Пројекти</li>
+                <li>Контакт</li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
       </section>
       <div
         style="height: 200vh; background-image: linear-gradient(to bottom, rgb(220, 234, 248), #5991e4);"
       ></div>
-      <section class="contact" id="contact">
+      <section class="contact clearfix" id="contact">
         <h2 class="contactHeading">Контакт</h2>
         <form
           action="mailto:nenadabramovic@outlook.com"
@@ -185,7 +190,7 @@
               type="text"
               name="ime"
               id="ime"
-              placeholder="example@gmail.com"
+              placeholder="нпр. Петар Петровић"
             />
           </div>
           <div>
@@ -209,8 +214,8 @@
         <p class="nameParagraph">Ненад Абрамовић</p>
         <nav class="navigation">
           <ul>
-            <li id="pocetak">Почетак</li>
-            <li id="oMeni">О мени</li>
+            <li>Почетак</li>
+            <li>О мени</li>
             <li>Пројекти</li>
             <li>Контакт</li>
           </ul>
