@@ -1,7 +1,5 @@
-{
-  let price = 100;
-  let diameter = 32;
-  let pricePerSquareCm = price / ((diameter ** 2 * Math.PI) / 4);
+let pizzaPrice = 150;
+let pizzaDiameter = 32;
+let pizzaPricePerSquareCm = pizzaPrice / ((pizzaDiameter ** 2 * Math.PI) / 4);
 
-  console.log(`Цена пице по цм² је ${pricePerSquareCm} динара.`);
-}
+console.log(`Цена пице по цм² је ${pizzaPricePerSquareCm.toFixed(2)} динара.`);
