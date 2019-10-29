@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -105,7 +105,7 @@ nav li:active{
 }
 
 .about-p{
-    color: #817D55; font-family: Verdana, Geneva, sans-serif; font-size: 2rem; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+    color: #817D55; font-family: Verdana, Geneva, sans-serif; font-size: 2rem; font-weight: bold; letter-spacing: -1px; line-height: 2; text-align: center;
     text-shadow: 1px 3px rgb(8, 8, 8);
 
 }
@@ -181,19 +181,20 @@ form button:hover{
 }
 
 input[type=text],input[type=email] , textarea{
+    display: block;
     background-color: #1A161A;
     color: #817D55;
     border: none;
     border-bottom: 1px solid #817D55;
-    margin-top: 15px;
+    margin-top: 35px;
+    padding:5px;
 }
 
 #foot{
     position: relative;
     color: #817D55;
     text-align: center;
-    top:15%;
-    
+    top:15%; 
 }
 
 #hrule{
