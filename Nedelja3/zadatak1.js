@@ -9,6 +9,7 @@ function maxOfThreeNumbers(a, b, c) {
     if (a < c) return c;
     else return a;
   }
+  // return -Math.min(-a, -b, -c);
 }
 
 console.log(`Максимум бројева 3, 5 и 4 је ${maxOfThreeNumbers(3, 5, 4)}.`);
