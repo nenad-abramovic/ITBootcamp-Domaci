@@ -12,7 +12,7 @@ function maxOfThreeNumbers(a, b, c) {
   return Math.max(a, b, c);
 }
 
-console.log(maxOfThreeNumbers(3, 5, 4));
+console.log(`Максимум бројева 3, 5 и 4 је ${maxOfThreeNumbers(3, 5, 4)}.`);
 
 // 2. задатак
 // Написати функцију која израчунава цену пице по квадратном центиметру (уносе се цена и полупречник)
