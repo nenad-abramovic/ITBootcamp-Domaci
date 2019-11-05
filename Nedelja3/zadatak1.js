@@ -33,7 +33,8 @@ function getCheapestPizza(p1, r1, p2, r2, p3, r3) {
   let secondPizzaPrice = calculatePizzaPrice(p2, r2);
   let thirdPizzaPrice = calculatePizzaPrice(p3, r3);
 
-  return 1 / maxOfThreeNumbers(1 / firstPizzaPrice, 1 / secondPizzaPrice, 1 / thirdPizzaPrice);
+  // return 1 / maxOfThreeNumbers(1 / firstPizzaPrice, 1 / secondPizzaPrice, 1 / thirdPizzaPrice);
+  return -maxOfThreeNumbers(-firstPizzaPrice, -secondPizzaPrice, -thirdPizzaPrice);
 }
 
 console.log(`Цена најјефтиније пице је ${getCheapestPizza(150, 32, 180, 30, 120, 30)} динара по цм².`);
