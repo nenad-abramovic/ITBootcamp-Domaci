@@ -2,14 +2,13 @@
 // Написати функцију која враћа максимум од 3 броја (уносе се 3 броја)
 
 function maxOfThreeNumbers(a, b, c) {
-  // if (a < b) {
-  //   if (b < c) return c;
-  //   else return b;
-  // } else {
-  //   if (a < c) return c;
-  //   else return a;
-  // }
-  return Math.max(a, b, c);
+  if (a < b) {
+    if (b < c) return c;
+    else return b;
+  } else {
+    if (a < c) return c;
+    else return a;
+  }
 }
 
 console.log(`Максимум бројева 3, 5 и 4 је ${maxOfThreeNumbers(3, 5, 4)}.`);
