@@ -18,7 +18,7 @@ console.log(`Максимум бројева 3, 5 и 4 је ${maxOfThreeNumbers(
 // Написати функцију која израчунава цену пице по квадратном центиметру (уносе се цена и полупречник)
 
 function calculatePizzaPrice(price, radius) {
-  return (price / (radius ** 2 * Math.PI / 4)).toFixed(2);
+  return (price / (radius ** 2 * Math.PI)).toFixed(2);
 }
 
 console.log(`Цена пице по квадратном центиметру је ${calculatePizzaPrice(150, 32)} динара.`);
