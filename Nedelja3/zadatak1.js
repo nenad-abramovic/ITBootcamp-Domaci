@@ -26,7 +26,18 @@ console.log(`Цена пице по квадратном центиметру ј
 console.log(`Цена пице по квадратном центиметру је ${calculatePizzaPrice(120, 30)} динара.`);
 
 // 3. задатак
-// Написати функцију која враћа цену најјефтиније пице од 3 унете (уносе се полупречници и цене), користећи две функције изнад.
+// Написати функцију која враћа цену најјефтиније пице од 3 унете (уносе се полупречници и цене), користећи две функције изнад (Написати функцију за минимум).
+
+function minOfThreeNumbers(a, b, c) {
+  if (a < b) {
+    if (c < a) return c;
+    else return a;
+  } else {
+    if (c < b) return c;
+    else return b;
+  }
+  // return -maxOfThreeNumbers(-a, -b, -c);
+}
 
 function getCheapestPizza(p1, r1, p2, r2, p3, r3) {
   let firstPizzaPrice = calculatePizzaPrice(p1, r1);
@@ -34,7 +45,7 @@ function getCheapestPizza(p1, r1, p2, r2, p3, r3) {
   let thirdPizzaPrice = calculatePizzaPrice(p3, r3);
 
   // return 1 / maxOfThreeNumbers(1 / firstPizzaPrice, 1 / secondPizzaPrice, 1 / thirdPizzaPrice);
-  return -maxOfThreeNumbers(-firstPizzaPrice, -secondPizzaPrice, -thirdPizzaPrice);
+  return minOfThreeNumbers(firstPizzaPrice, secondPizzaPrice, thirdPizzaPrice);
 }
 
 console.log(`Цена најјефтиније пице је ${getCheapestPizza(150, 32, 180, 30, 120, 30)} динара по цм².`);
