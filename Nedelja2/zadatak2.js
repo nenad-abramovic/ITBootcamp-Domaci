@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let headingText = "Welcome to DOM";
 const headingElement = document.getElementById("heading");
 
@@ -8,3 +9,14 @@ let paragraphForDiv =
 const divElement = document.getElementById("divForParagraph");
 
 divElement.innerHTML = `<p>${paragraphForDiv}</p>`;
+=======
+var text = 'Welcome to DOM';
+
+const header = document.getElementById('section-head');
+header.innerHTML = text;
+
+let paragraph = 'Hello, how are you doing today?';
+
+const container = document.getElementById('container');
+container.innerHTML = `<p>${paragraph}</p>`;
+>>>>>>> 5fdc75645131d0ba2f1c8edb690b04e9d87b67ec

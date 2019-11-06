@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let a = 10;
 let b = 4;
 
@@ -22,3 +23,15 @@ console.log(`${productString} ${a} * ${b} = ${product}`);
 console.log(`${quotientString} ${a} / ${b} = ${quotient}`);
 console.log(`${moduloString} ${a} % ${b} = ${modulo}`);
 console.log(`${expString} ${a} ^ ${b} = ${exp}`);
+=======
+let a = 13;
+let b = 7.23;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);
+console.log(a % b);
+console.log(a ** b);
+
+>>>>>>> 5fdc75645131d0ba2f1c8edb690b04e9d87b67ec
