@@ -11,3 +11,7 @@ div.left , div.right {
 h1 {
     text-align: center;
 }
+
+ #message {
+    font-weight: bold;
+}
