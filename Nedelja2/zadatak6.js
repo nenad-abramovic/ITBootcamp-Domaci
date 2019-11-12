@@ -8,7 +8,6 @@ for(let i = 1; i <= 100; i++){
         ispis += 'Zazz';
     if(i % 13 == 0)
         ispis += 'Pezz';
-
     if(ispis == '') 
         ispis = i;
     console.log(ispis)
