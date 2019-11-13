@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootcamp Ledger</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Bootcamp Ledger</h1>
+  </header>
+  <main>
+    <section>
+      <div>
+        <!-- <label for="desc">Description</label> -->
+        <input type="text" id="txt-desc" placeholder="Description" />
+      </div>
+      <div>
+        <!-- <label for="txt-amount">Amount</label> -->
+        <input type="text" id="txt-amount" placeholder="Amount" />
+      </div>
+      <div>
+        <!-- <label for="sel-type">Type</label> -->
+        <select id="sel-type">
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+      </div>
+      <div>
+        <button id="btn-add">Add Transaction</button>
+      </div>
+    </section>
+    <section>
+      <p>Profit <span id="txt-profit">0</span></p>
+    </section>
+    <section>
+      <table id="tbl-income">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Sum</td>
+            <td>0</td>
+          </tr>
+        </tfoot>
+      </table>
+      <table id="tbl-expense">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Sum</td>
+            <td>0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+</body>
+
+</html>

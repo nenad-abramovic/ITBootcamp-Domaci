@@ -1,0 +1,85 @@
+/*
+
+#F7F100 yellow
+
+#F6D200 middle
+
+#EF9D00 orange
+
+*/
+
+body {
+  background-color: #F7F100;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  color: #EF9D00;
+  text-align: center;
+}
+section {
+  text-align: center;
+}
+div {
+  display: inline-block;
+  text-align: center;
+}
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #EF9D00;
+  padding: 10px 2px;
+  margin: 0 15px;
+  font-size: 17px;
+}
+select {
+  padding: 10px 20px 10px 10px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 10px;
+  background-color: transparent;
+  border: 2px solid #EF9D00;
+  border-radius: 15px;
+  appearance:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+option {
+  background-color: #F6D200;
+  color:blue;
+}
+button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #EF9D00;
+  border-radius: 15px;
+  margin: 0 20px;
+}
+button:hover, 
+select:hover {
+  background-color: #F6D200;
+}
+label, input {
+  display: block;
+}
+table {
+  float: left;
+  width: 40vw;
+  margin: 4vw;
+  background-color: #F6D200;
+  border-collapse: collapse;
+  border-radius: 15px;
+  height: 400px;
+}
+tbody, thead {
+  border-bottom: 2px solid #EF9D00;
+  padding: 10px;
+  border-radius: 10px;
+}
+td, th {
+  padding: 10px;
+}
+tfoot {
+  font-weight: bold;
+}
