@@ -53,3 +53,5 @@ let recipe1 = {
     sastojak7
   ]
 };
+
+console.log(recipe1);

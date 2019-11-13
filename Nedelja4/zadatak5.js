@@ -56,10 +56,7 @@ let recept = {
 };
 
 recept.cena = function () {
-  let totalPrice = 0;
-  this.ingredients.forEach(ingredient => ingredient.price = ingredient.qunatity * ingredient.unitPrice);
-  this.ingredients.forEach(ingredient => totalPrice += ingredient.price);
-  return totalPrice;
+  return this.ingredients.reduce((acc, c) => acc + (c.unitPrice * c.qunatity), 0);
 };
 
 console.log(recept.cena());

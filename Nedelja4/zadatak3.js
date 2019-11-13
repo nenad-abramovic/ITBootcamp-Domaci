@@ -39,3 +39,5 @@ let sastojak7 = {
   qunatity: 0.4,
   unitPrice: 120
 };
+
+console.log(sastojak1);
