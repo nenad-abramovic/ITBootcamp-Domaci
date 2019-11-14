@@ -12,6 +12,14 @@
   //     Састојци: Шпагете,Павлака за кување,Бели лук,Ћуреће месо,Маслац,Јаја,Бибер,Со
   //     ```
 
+  // 2. Направити функцију која прима низ горе направљених објеката и исписује оне рецепте који су Почетни или Лаки(не исписује остале)
+
+  //     ```
+  //     <ime-recepta>
+  //     Тежина: <Лаки || Почетни>
+  //     Састојци: [<...>,...]
+  //     ```
+
   console.log('┏━━━━━━━━━━━━━━━━━━━━━━━┓');
   console.log('┃     Први задатак    ▼ ┃');
   console.log('┗━━━━━━━━━━━━━━━━━━━━━━━┛');
@@ -160,30 +168,15 @@
     }
   ];
 
-
-
   function printRecipe(recipe) {
     console.log(`${recipe.name}:\nТежина: ${recipe.difficulty}\nСастојци: ${recipe.ingredients.join(', ')}`);
   }
 
   printRecipe(recipe1);
 
-
-  // 2. Направити функцију која прима низ горе направљених објеката и исписује оне рецепте који су Почетни или Лаки(не исписује остале)
-
-  //     ```
-  //     <ime-recepta>
-  //     Тежина: <Лаки || Почетни>
-  //     Састојци: [<...>,...]
-  //     ```
-
   console.log('┏━━━━━━━━━━━━━━━━━━━━━━━┓');
   console.log('┃    Други задатак    ▼ ┃');
   console.log('┗━━━━━━━━━━━━━━━━━━━━━━━┛');
-
-  function printRecipe(recipe) {
-    console.log(`${recipe.name}:\nТежина: ${recipe.difficulty}\nСастојци: ${recipe.ingredients.join(', ')}`);
-  }
 
   function printEasyRecipes(recipes) {
     recipes.forEach(recipe => {
@@ -225,6 +218,7 @@
   //         ...
   //     }
   //     ```
+
   class Recept {
     constructor(name, difficulty, ...ingredients) {
       this.name = name;
@@ -268,5 +262,5 @@
   console.log('┃     Пети задатак    ▼ ┃');
   console.log('┗━━━━━━━━━━━━━━━━━━━━━━━┛');
 
-  console.log(`Укупна цена рецепта је ${recept.cena()} динара.`);
+  console.log(`Укупна цена за рецепт ${recept.name} је ${recept.cena()} динара.`);
 }
