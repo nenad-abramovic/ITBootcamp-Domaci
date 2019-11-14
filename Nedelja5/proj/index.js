@@ -1,28 +1,34 @@
 
 class Ledger {
 
-  static profit = 0;
+  static numberOfTransactions = 0;
+  static totalIncome = 0;
+  static totalExpense = 0;
   static transactions = [];
 
   static makeTransaction(transaction) {
     this.transactions.push(transaction);
-    if (transaction.type = 'Income') {
-      this.profit += transaction.amount;
+    this.numberOfTransactions++;
+    if (transaction.type == 'Income') {
+      this.totalIncome += transaction.amount;
     } else {
-      this.profit -= transaction.amount;
+      this.totalExpense += transaction.amount;
     }
   }
 
-  static getTotalIncome() {
-    return this.incomes.reduce((acc, current) => acc + current.amount, 0);
+  static removeTransaction(transactionID) {
+    let idx = this.transactions.findIndex(tr => tr.ID == transactionID);
+    this.transactions.splice(idx, 1);
   }
-  static getTotalExpenses() {
-    return this.expenses.reduce((acc, current) => acc + current.amount, 0)
+
+  static getProfit() {
+    return this.totalIncome - this.totalExpense;
   }
 }
 
 class Transaction {
   constructor(description, amount, type) {
+    this.ID = Ledger.numberOfTransactions;
     this.description = description.trim();
     this.amount = Number(amount.trim());
     this.type = type;
@@ -63,17 +69,17 @@ function addTransaction() {
   row.appendChild(tdAmount);
 
   Ledger.makeTransaction(transaction);
-  txtProfit.innerHTML = Ledger.profit;
+  txtProfit.innerHTML = Ledger.getProfit();
 
   if (transaction.type == 'Income') {
     tblIncome.children[1].appendChild(row);
-    tblIncomeSum.innerHTML = Ledger.getTotalIncome();
+    tblIncomeSum.innerHTML = Ledger.totalIncome;
   } else {
     tblExpense.children[1].appendChild(row);
-    tblExpenseSum.innerHTML = Ledger.getTotalExpenses();
+    tblExpenseSum.innerHTML = Ledger.totalExpense;
   }
 
-  txtProfit.parentElement.style.color = profit >= 0 ? 'green' : 'red';
+  txtProfit.parentElement.style.color = Ledger.getProfit() >= 0 ? 'green' : 'red';
 
   txtDesc.value = '';
   txtAmount.value = '';
