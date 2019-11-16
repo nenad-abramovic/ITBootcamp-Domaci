@@ -20,40 +20,39 @@ function btnAddClick(e) {
     addItem();
 }
 function btnRemoveClick() {
-    let tasks = taskListContainer.children;
-    let i = taskListContainer.children.length;
-    if (tasks.length == 0) {
+    let chkBoxes = document.querySelectorAll('.chk-state');
+    if (chkBoxes.length == 0) {
         alert('There are no tasks in list.');
         return;
     }
-    if (![...tasks].some((task) => task.children[1].children[1].checked)) {
+    if (![...chkBoxes].some((chk) => chk.checked)) {
         alert('There are no selected tasks in list.');
         return;
     }
     if (!confirm('Are you sure?')) {
         return;
     }
-    while (i-- > 0) {
-        if (tasks[i].children[1].children[1].checked) {
-            tasks[i].remove();
-        }
-    }
+    chkBoxes.forEach(chk => {
+        if (chk.checked) chk.parentElement.parentElement.remove();
+    });
 }
 
 function btnInvertSelClick() {
-    let tasks = taskListContainer.children;
-    let i = taskListContainer.children.length;
-    if (tasks.length == 0) {
+    let chkBoxes = document.querySelectorAll('.chk-state');
+
+    if (chkBoxes.length == 0) {
         alert('There are no tasks in list.');
         return;
     }
     if (!confirm('Are you sure?')) {
         return;
     }
-    while (i-- > 0) {
-        tasks[i].children[1].children[1].checked = !tasks[i].children[1].children[1].checked;
-    }
+    chkBoxes.forEach(chk => {
+        chk.checked = !chk.checked;
+        chk.dispatchEvent(new Event("change"));
+    });
 }
+
 function txtKeyUp(e) {
     // console.log(e);
     if (e.keyCode == 13) {

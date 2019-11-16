@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootcamp Ledger</title>
-  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,400i,700,700i,900,900i&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="index.js" defer></script>
 </head>
 
 <body>
@@ -14,67 +17,64 @@
     <h1>Bootcamp Ledger</h1>
   </header>
   <main>
-    <section>
-      <div>
-        <!-- <label for="desc">Description</label> -->
-        <input type="text" id="txt-desc" placeholder="Description" />
-      </div>
-      <div>
-        <!-- <label for="txt-amount">Amount</label> -->
-        <input type="text" id="txt-amount" placeholder="Amount" />
-      </div>
-      <div>
-        <!-- <label for="sel-type">Type</label> -->
-        <select id="sel-type">
-          <option value="Income">Income</option>
-          <option value="Expense">Expense</option>
-        </select>
-      </div>
-      <div>
-        <button id="btn-add">Add Transaction</button>
-      </div>
+    <section class="sec-input">
+      <input type="text" id="txt-desc" class="txt-input" placeholder="Description">
+      <input type="text" id="txt-amount" class="txt-input" placeholder="Amount">
+      <select id="sel-type">
+        <option value="Income">Income</option>
+        <option value="Expense">Expense</option>
+      </select>
+      <button>Add Transaction</button>
     </section>
-    <section>
-      <p>Profit <span id="txt-profit">0</span></p>
-    </section>
-    <section>
-      <table id="tbl-income">
+    <section class="sec-tables">
+      <table class="income">
+        <caption>Income</caption>
         <thead>
           <tr>
-            <th>Description</th>
-            <th>Amount</th>
+            <td>ID</td>
+            <td>Description</td>
+            <td>Amount</td>
           </tr>
         </thead>
         <tbody>
-
+          <td>1</td>
+          <td>neki stvarno dug opis </td>
+          <td>100</td>
         </tbody>
         <tfoot>
           <tr>
-            <td>Sum</td>
+            <td colspan="2">Sum</td>
             <td>0</td>
           </tr>
         </tfoot>
       </table>
-      <table id="tbl-expense">
+
+      <table class="expense">
+        <caption>Expenses</caption>
         <thead>
           <tr>
-            <th>Description</th>
-            <th>Amount</th>
+            <td>ID</td>
+            <td>Description</td>
+            <td>Amount</td>
           </tr>
         </thead>
         <tbody>
-
+          <td>2</td>
+          <td>rashod</td>
+          <td>90</td>
         </tbody>
         <tfoot>
           <tr>
-            <td>Sum</td>
+            <td colspan="2">Sum</td>
             <td>0</td>
           </tr>
         </tfoot>
       </table>
     </section>
   </main>
-  <script src="index.js"></script>
+  <footer>
+    <label>&copy;2019 Nenad Abramovic</label>
+  </footer>
 </body>
 
 </html>

@@ -1,84 +1,122 @@
-/*
-
-#F7F100 yellow
-
-#F6D200 middle
-
-#EF9D00 orange
-
-*/
-
 body {
-  background-color: #F7F100;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(105, 92, 67);
+  color: goldenrod;
+  font-family: 'Playfair Display SC', serif;
+  margin: 0;
 }
 
-h1 {
-  color: #EF9D00;
+header {
+  background-color: rgb(43, 41, 33);
+  padding: 10px;
   text-align: center;
 }
-section {
+
+main {
+  padding-bottom: 80px;
+}
+
+.sec-input {
+  padding: 50px;
   text-align: center;
 }
-div {
-  display: inline-block;
-  text-align: center;
+
+::placeholder {
+  color: rgba(218, 165, 32, 0.507);
 }
-input[type="text"] {
+
+.txt-input {
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid #EF9D00;
+  border-bottom: 2px solid goldenrod;
+  color: goldenrod;
+  font-size: 16px;
+  margin: 10px;
   padding: 10px 2px;
-  margin: 0 15px;
-  font-size: 17px;
 }
+
+select, button {
+  background-color: rgba(218, 165, 32, 0.2);
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  color: rgb(218, 165, 32);
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 4px rgb(218, 165, 32);
+}
+
 select {
-  padding: 10px 20px 10px 10px;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 10px;
-  background-color: transparent;
-  border: 2px solid #EF9D00;
-  border-radius: 15px;
-  appearance:none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: treeitem;
 }
-option {
-  background-color: #F6D200;
-  color:blue;
+
+select:hover, button:hover {
+  background-color: rgba(218, 165, 32, 1);
+  box-shadow: 2px 2px 10px goldenrod;
+  color: rgb(105, 92, 67);
 }
-button {
-  padding: 10px 20px;
-  background-color: transparent;
-  border: 2px solid #EF9D00;
-  border-radius: 15px;
-  margin: 0 20px;
+
+.sec-tables {
+  width: 800px;
+  margin: 0 auto;
 }
-button:hover, 
-select:hover {
-  background-color: #F6D200;
-}
-label, input {
-  display: block;
-}
+
 table {
-  float: left;
-  width: 40vw;
-  margin: 4vw;
-  background-color: #F6D200;
+  background-color: rgba(218, 165, 32, 0.2);
   border-collapse: collapse;
-  border-radius: 15px;
+  display: inline-block;
 }
-tbody, thead {
-  border-bottom: 2px solid #EF9D00;
-  padding: 10px;
-  border-radius: 10px;
+
+caption {
+  background-color: rgb(105, 92, 67);
+  font-size: 20px;
+  padding: 5px;
 }
-td, th {
-  padding: 10px;
+
+.income {
+  float: left;
 }
-tfoot {
-  font-weight: bold;
+
+.expense {
+  float: right;
+}
+
+tr {
+  border: 1px solid goldenrod;
+}
+
+td {
+  padding: 15px;
+}
+
+tbody td:nth-child(3n) {
+  text-align: right;
+}
+
+tbody td:nth-child(3n-1) {
+  width: 200px;
+}
+
+tfoot td:last-child {
+  text-align: right;
+}
+
+thead, tfoot {
+  background-color: rgba(218, 165, 32, 0.3);
+}
+
+tr:hover {
+  background-color: rgba(218, 165, 32, 0.2);
+}
+
+
+footer {
+  background-color: rgb(43, 41, 33);
+  bottom: 0;
+  height: 80px;
+  position: fixed;
+  text-align: center;
+  width: 100vw;
+}
+
+label {
+  line-height: 80px;
 }
