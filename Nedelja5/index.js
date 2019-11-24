@@ -35,31 +35,16 @@ else {
 
     let spDesc = document.createElement('span');
     spDesc.className = 'sp-desc';
-    spDesc.addEventListener('mouseover', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'visible';
-    });
-    spDesc.addEventListener('mouseleave', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'hidden';
-    });
+    addHover(spDesc);
     spDesc.textContent = transaction.desc;
 
     let spAmount = document.createElement('span');
-    spAmount.addEventListener('mouseover', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'visible';
-    });
-    spAmount.addEventListener('mouseleave', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'hidden';
-    });
+    addHover(spAmount);
     spAmount.className = 'sp-amount';
     spAmount.textContent = formatCurrency(transaction.amount);
 
     let removeBtn = document.createElement('button');
-    removeBtn.addEventListener('mouseover', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'visible';
-    });
-    removeBtn.addEventListener('mouseleave', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'hidden';
-    });
+    addHover(removeBtn);
     removeBtn.className = 'rm-btn';
     removeBtn.id = transaction.id;
     removeBtn.textContent = 'Х';
@@ -89,12 +74,7 @@ else {
     } else {
       totalExpense += transaction.amount;
       let spPercent = document.createElement('span');
-      spPercent.addEventListener('mouseover', (e) => {
-        e.target.parentElement.children[2].style.visibility = 'visible';
-      });
-      spPercent.addEventListener('mouseleave', (e) => {
-        e.target.parentElement.children[2].style.visibility = 'hidden';
-      });
+      addHover(spPercent);
       item.appendChild(spPercent);
       expensesList.appendChild(item);
     }
@@ -174,22 +154,12 @@ btnAdd.addEventListener('click', (e) => {
   spDesc.textContent = trDesc;
 
   let spAmount = document.createElement('span');
-  spAmount.addEventListener('mouseover', (e) => {
-    e.target.parentElement.children[2].style.visibility = 'visible';
-  });
-  spAmount.addEventListener('mouseleave', (e) => {
-    e.target.parentElement.children[2].style.visibility = 'hidden';
-  });
+  addHover(spAmount);
   spAmount.className = 'sp-amount';
   spAmount.textContent = formatCurrency(trAmount);
 
   let removeBtn = document.createElement('button');
-  removeBtn.addEventListener('mouseover', (e) => {
-    e.target.parentElement.children[2].style.visibility = 'visible';
-  });
-  removeBtn.addEventListener('mouseleave', (e) => {
-    e.target.parentElement.children[2].style.visibility = 'hidden';
-  });
+  addHover(removeBtn);
   removeBtn.className = 'rm-btn';
   removeBtn.id = transaction.id;
   removeBtn.textContent = 'Х';
@@ -217,12 +187,7 @@ btnAdd.addEventListener('click', (e) => {
     incomesList.appendChild(item);
   } else {
     let spPercent = document.createElement('span');
-    spPercent.addEventListener('mouseover', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'visible';
-    });
-    spPercent.addEventListener('mouseleave', (e) => {
-      e.target.parentElement.children[2].style.visibility = 'hidden';
-    });
+    addHover(spPercent);
     totalExpense += trAmount;
     item.appendChild(spPercent);
     expensesList.appendChild(item);
@@ -260,5 +225,14 @@ function updatePercents() {
       let n = Number(item.children[1].textContent.slice(0, -4).replace(/,/g, ''));
       item.lastElementChild.textContent = formatPercentage(n / totalIncome * 100);
     }
+  });
+}
+
+function addHover(element) {
+  element.addEventListener('mouseover', (e) => {
+    e.target.parentElement.children[2].style.visibility = 'visible';
+  });
+  element.addEventListener('mouseleave', (e) => {
+    e.target.parentElement.children[2].style.visibility = 'hidden';
   });
 }
