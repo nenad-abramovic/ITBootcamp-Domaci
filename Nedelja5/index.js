@@ -60,6 +60,8 @@ else {
       localStorage.setItem('transactions', JSON.stringify(transactions));
 
       e.target.parentElement.remove();
+
+      updatePercents();
     })
 
 
@@ -81,6 +83,7 @@ else {
     txtValid.textContent = 'Претходне трансакције успешно учитане!';
   });
   updateHeader();
+  updatePercents();
 }
 
 
@@ -166,6 +169,8 @@ btnAdd.addEventListener('click', (e) => {
     transactions = transactions.filter(tr => tr.id != removeBtn.id);
     localStorage.setItem('transactions', JSON.stringify(transactions));
     e.target.parentElement.remove();
+
+    updatePercents();
   })
 
 
@@ -185,6 +190,7 @@ btnAdd.addEventListener('click', (e) => {
   }
 
   updateHeader();
+  updatePercents();
   localStorage.setItem('transactions', JSON.stringify(transactions));
   txtValid.textContent = 'Унос успешан!';
 
@@ -192,10 +198,11 @@ btnAdd.addEventListener('click', (e) => {
 
 
 function formatCurrency(amount) {
-  return `${(amount / 100).toLocaleString('sr-Cyrl', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} РСД`;
+  return `${(amount / 100).toLocaleString('en', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} РСД`;
 }
 
 function formatPercentage(percentage) {
+  console.log(percentage);
   if (isNaN(percentage)) return '0%';
   return `${percentage.toLocaleString('sr-Cyrl', { style: 'percent', maximumFractionDigits: 0 })}`
 }
@@ -207,4 +214,14 @@ function updateHeader() {
 
   profit = totalIncome - totalExpense;
   txtProfit.textContent = formatCurrency(profit);
+}
+
+function updatePercents() {
+  expensesList.childNodes.forEach(item => {
+    if (item.tagName == 'DIV') {
+      let n = Number(item.children[1].textContent.slice(0, -4).replace(/,/g, ''));
+      console.log(item.lastElementChild, n);
+      item.lastElementChild.textContent = formatPercentage(n / totalIncome * 100);
+    }
+  });
 }
