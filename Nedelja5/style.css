@@ -1,61 +1,49 @@
 body {
-  background-color: #abdca7;
-  color: #248e38;
-  font-family: 'Roboto Slab', serif;
+  background-color: lightgreen;
+  padding: 20px;
   text-align: center;
 }
-
-#container {
-  border: 3px solid #323232;
-  background-color: #FFFFFF;
-  margin: 20px auto;
-  width: 800px;
-  height: 200px;
+.wrapper {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  margin: 0 auto;
+  width: 900px;
 }
 
-h1 {
-  color: #248e38;
-  text-shadow: 3px 3px 0px #248e3880;
+header {
+  background-color: darkseagreen;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
 }
 
-input {
-  border: 0;
-  border: 1px solid #248e38;
-  margin: 10px;
-  padding: 5px 2px;
-  border-radius: 5px;
-  color: #248e38
+.transaction-input {
+  background-color: darkcyan;
+  padding: 20px;
 }
 
-input:focus {
-  box-shadow: 1px 1px 4px #248e38;
+#btn-add {
+  display: block;
+  width: 478px;
+  margin: 10px auto;
 }
 
-::placeholder {
-  color: #248e38;
-  font-size: 1.2em;
+
+.transactions {
+  width: 820px;
+  background-color: red;
+  margin: 10px auto;
 }
 
-select, button {
-  border: 1px solid #248e38;
-  background-color: #248e381e;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 10px;
-  color: #248e38;
-  box-shadow: 2px 2px 5px #248e38;
+.incomes, .expenses {
+  width: 400px;
+  background-color: blue;
 }
 
-button:active {
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
-button:hover, select:hover {
-    background-color: #248e3849;
-}
-hr {
-  width: 80%;
-  color: #248e38;
+.incomes {
+  float: left;
 }
 
+.expenses {
+  float: right;
+}
