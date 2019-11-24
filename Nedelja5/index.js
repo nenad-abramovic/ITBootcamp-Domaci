@@ -220,7 +220,6 @@ function updatePercents() {
   expensesList.childNodes.forEach(item => {
     if (item.tagName == 'DIV') {
       let n = Number(item.children[1].textContent.slice(0, -4).replace(/,/g, ''));
-      console.log(item.lastElementChild, n);
       item.lastElementChild.textContent = formatPercentage(n / totalIncome * 100);
     }
   });
