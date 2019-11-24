@@ -25,10 +25,12 @@ else {
   transactions.forEach(transaction => {
     let item = document.createElement('div');
     item.addEventListener('mouseover', (e) => {
-      e.target.children[2].style.visibility = 'visible';
+      if (e.target.tagName == 'DIV')
+        e.target.children[2].style.visibility = 'visible';
     });
     item.addEventListener('mouseleave', (e) => {
-      e.target.children[2].style.visibility = 'hidden';
+      if (e.target.tagName == 'DIV')
+        e.target.children[2].style.visibility = 'hidden';
     });
 
     let spDesc = document.createElement('span');
@@ -153,10 +155,12 @@ btnAdd.addEventListener('click', (e) => {
 
   let item = document.createElement('div');
   item.addEventListener('mouseover', (e) => {
-    e.target.children[2].style.visibility = 'visible';
+    if (e.target.tagName == 'DIV')
+      e.target.children[2].style.visibility = 'visible';
   });
   item.addEventListener('mouseleave', (e) => {
-    e.target.children[2].style.visibility = 'hidden';
+    if (e.target.tagName == 'DIV')
+      e.target.children[2].style.visibility = 'hidden';
   });
 
   let spDesc = document.createElement('span');
