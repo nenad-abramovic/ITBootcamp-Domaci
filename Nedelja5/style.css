@@ -49,6 +49,7 @@ header {
 
 #txt-amount {
   width: 100px;
+  text-align: right;
 }
 
 #btn-add {
