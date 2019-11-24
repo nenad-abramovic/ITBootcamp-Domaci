@@ -16,28 +16,69 @@ header {
   border-radius: 20px 20px 0 0;
   padding: 20px;
 }
+.total-income, .total-expense {
+  text-align: left;
+  width: 320px;
+  margin: 15px auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.total-income {
+  background-color: green;
+}
+.total-expense {
+  background-color: red;
+}
+#txt-total-income, #txt-total-expense {
+  display: inline-block;
+  width: 200px;
+  text-align: right;
+}
 
 .transaction-input {
   background-color: darkcyan;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   padding: 20px;
+}
+
+#txt-desc {
+  width: 300px;
+}
+
+#txt-amount {
+  width: 100px;
 }
 
 #btn-add {
   display: block;
-  width: 478px;
+  width: 490px;
   margin: 10px auto;
 }
 
 
 .transactions {
   width: 820px;
-  background-color: red;
   margin: 10px auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.clearfix {
+  overflow: auto;
 }
 
 .incomes, .expenses {
   width: 400px;
-  background-color: blue;
+  background-color: rgba(0, 128, 0, 0.37);
+  border: 1px solid green;
+  border-radius: 10px;
+  margin: 10px 0;
 }
 
 .incomes {
