@@ -202,7 +202,6 @@ function formatCurrency(amount) {
 }
 
 function formatPercentage(percentage) {
-  console.log(percentage);
   if (isNaN(percentage)) return '0%';
   return `${percentage.toLocaleString('sr-Cyrl', { style: 'percent', maximumFractionDigits: 0 })}`
 }
