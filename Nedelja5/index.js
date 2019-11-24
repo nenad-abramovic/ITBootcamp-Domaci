@@ -43,9 +43,11 @@ else {
     spDesc.textContent = transaction.desc;
 
     let spAmount = document.createElement('span');
+    spAmount.className = 'sp-amount';
     spAmount.textContent = formatCurrency(transaction.amount);
 
     let removeBtn = document.createElement('button');
+    removeBtn.className = 'rm-btn';
     removeBtn.id = transaction.id;
     removeBtn.textContent = 'Х';
     removeBtn.style.visibility = 'hidden';
@@ -148,9 +150,11 @@ btnAdd.addEventListener('click', (e) => {
   spDesc.textContent = trDesc;
 
   let spAmount = document.createElement('span');
+  spAmount.className = 'sp-amount';
   spAmount.textContent = formatCurrency(trAmount);
 
   let removeBtn = document.createElement('button');
+  removeBtn.className = 'rm-btn';
   removeBtn.id = transaction.id;
   removeBtn.textContent = 'Х';
   removeBtn.style.visibility = 'hidden';
