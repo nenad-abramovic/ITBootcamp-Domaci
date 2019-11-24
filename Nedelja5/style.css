@@ -59,7 +59,7 @@ header {
 
 
 .transactions {
-  width: 820px;
+  width: 880px;
   margin: 10px auto;
 }
 
@@ -74,7 +74,7 @@ header {
 }
 
 .incomes, .expenses {
-  width: 400px;
+  width: 420px;
   background-color: rgba(0, 128, 0, 0.37);
   border: 1px solid green;
   border-radius: 10px;
@@ -100,4 +100,10 @@ header {
   color: red;
   border: 2px solid red;
   border-radius: 100%;
+}
+
+.sp-desc {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
 }

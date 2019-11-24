@@ -15,7 +15,6 @@ let profit = 0;
 let totalIncome = 0;
 let totalExpense = 0;
 let transactions = localStorage.getItem('transactions');
-
 if (transactions == 'null') {
   transactions = [];
   updateHeader();
@@ -33,6 +32,7 @@ else {
     });
 
     let spDesc = document.createElement('span');
+    spDesc.className = 'sp-desc';
     spDesc.addEventListener('mouseover', (e) => {
       e.target.parentElement.children[2].style.visibility = 'visible';
     });
@@ -160,6 +160,7 @@ btnAdd.addEventListener('click', (e) => {
   });
 
   let spDesc = document.createElement('span');
+  spDesc.className = 'sp-desc';
   spDesc.addEventListener('mouseover', (e) => {
     e.target.parentElement.children[2].style.visibility = 'visible';
   });
