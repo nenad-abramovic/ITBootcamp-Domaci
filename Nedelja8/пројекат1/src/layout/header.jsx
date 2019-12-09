@@ -12,9 +12,12 @@ export const Header = () => {
     return (
         <header>
             <h1>{info.name}</h1>
-            <label>{info.founded}</label>
-            <label>{info.founder}</label>
-            <label>{info.ceo}</label>
+            <label>Year founded: {info.founded}</label>
+            <br />
+            <label>Founder: {info.founder}</label>
+            <br />
+            <label>CEO: {info.ceo}</label>
+            <br />
             <label>{info.summary}</label>
         </header>
     );
