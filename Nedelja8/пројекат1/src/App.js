@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
-import { PastLList } from './components/past-l-list';
-import { UpcomingLList } from './components/upcoming-l-list';
 import { Header } from './layout/header';
+import { Footer } from './layout/footer';
+import { Content } from './layout/content';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <PastLList />
-      <UpcomingLList />
+      <hr />
+      <Content />
+      <hr />
+
+      <Footer />
     </div>
   );
 }

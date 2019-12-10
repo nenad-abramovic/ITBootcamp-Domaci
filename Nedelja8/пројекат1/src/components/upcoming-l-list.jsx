@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getUpcomingLaunches } from '../utilities/space-x-service';
 import { LaunchList } from './launch-list';
 import { DataYearFilter } from './data-year-filter';
-
+  
 export const UpcomingLList = (props) => {
     const [data, setData] = useState([]);
     const [displayData, setDisplayData] = useState([]);
@@ -12,7 +12,7 @@ export const UpcomingLList = (props) => {
 
     
     const handleChange =(e) => {
-        setDisplayData(data.filter( x => x.launch_year == e.target.value));
+        setDisplayData(data.filter( x => x.launch_year === e.target.value));
     }
     useEffect(() => { 
         getUpcomingLaunches()
@@ -29,6 +29,7 @@ export const UpcomingLList = (props) => {
     return (
         <>
         <DataYearFilter handleChange={handleChange} data={yearRange} />
+        <hr />
         <LaunchList data={displayData} />
         </>
     );

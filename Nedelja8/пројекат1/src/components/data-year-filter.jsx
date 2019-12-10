@@ -6,7 +6,8 @@ export const DataYearFilter = (props) => {
     let years = fillYearsToArray(...data);
 
     return (
-        <select id="year-filter" onChange={handleChange}>
+        <select defaultValue="" id="year-filter" onChange={handleChange} placeholder="Choose year">
+            <option value="" style={{display:"none"}}>Choose year</option>
             {
                 years.map(x => <option key={x} value={x}>{x}</option>)
             }

@@ -13,9 +13,7 @@ export const InfoDisplay = () => {
     <>
       <h1>{info.name}</h1>
       <label>Year founded: {info.founded}</label>
-      <br />
       <label>Founder: {info.founder}</label>
-      <br />
       <label>CEO: {info.ceo}</label>
       <br />
       <label>{info.summary}</label>

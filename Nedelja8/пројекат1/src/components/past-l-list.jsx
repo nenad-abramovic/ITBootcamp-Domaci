@@ -10,10 +10,10 @@ export const PastLList = (props) => {
 
     
     const handleChange =(e) => {
-        setDisplayData(data.filter( x => x.launch_year == e.target.value));
+        setDisplayData(data.filter( x => x.launch_year === e.target.value));
         
     }
-    useEffect(() => { 
+    useEffect(() => {
         getPastLaunches()
     .then(data => {
         setData(data);
@@ -28,6 +28,7 @@ export const PastLList = (props) => {
     return (
         <>
         <DataYearFilter handleChange={handleChange} data={yearRange} />
+        <hr />
         <LaunchList data={displayData} />
         </>
     );

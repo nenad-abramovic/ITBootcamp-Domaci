@@ -1,68 +1,73 @@
-.App {
+ body {
+  color: whitesmoke;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,1) 100%);
+  text-align: center;
+}
+.link {
+  display: inline-block;
+  padding: 20px;
+  background-color: rgba(245, 245, 245, 0.452);
+  border-radius: 20px;
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid wheat;
+  box-shadow: 1px 1px 5px rgba(245, 245, 245, 0.24);
+  width: 200px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.link:hover {
+  background-color: rgba(245, 245, 245, 0.534);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 2s cubic-bezier(0.75, 0.82, 0.8, 1.6);
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.mission-logo {
-  width: 200px;
-}
-
-label{
+li {
   display: inline-block;
-  padding: 5px 10px;
 }
 
-
-.l-list, header {
-  background-color: chartreuse;
-  width: 800px;
-  margin: 20px auto;
-  border: 3px solid chocolate;
-  border-radius: 20px;
+img {
+  width: 100px;
 }
 
-div, header {
-  background-color: rgba(0, 0, 0, 0.247);
-  border-radius: 20px;
-  border: 2px solid chocolate;
-  padding: 20px;
-  margin: 10px;
+header, footer, main {
+  width: 900px;
+  margin: auto;
 }
 
+header, footer {
+  height: 25vh;
+}
 header {
-  margin: 20px auto;
+  height: 18vh;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.l-list {
+  height: calc(100vh - 50vh);
+  overflow-y: auto;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,1) 100%);
+}
+
+.launch {
+  width: 200px;
+  float: left;
+  padding: 5px;
+  height: 200px;
+  border: 1px solid whitesmoke;
+  border-radius: 20px;
+  margin: 5px;
+}
+
+img {
+  float: left;
+}
+label {
+  display: block;
+  float: right;
 }

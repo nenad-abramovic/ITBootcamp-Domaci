@@ -1,5 +1,4 @@
 import React from 'react';
-import getSerbianDate from '../utilities/date-utility';
 import { Launch } from './launch';
 
 // Has attribute data, which is array that uses for display
