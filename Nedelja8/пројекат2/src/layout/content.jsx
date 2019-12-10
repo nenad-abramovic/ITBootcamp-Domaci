@@ -2,35 +2,35 @@ import React, { useState } from 'react';
 import { InputForm } from '../components/input-form';
 import { UserList } from '../components/user-list';
 
-const data = [
-  {
-    name: 'Петар Петровић',
-    number: '+381 641234567'
-  },
-  {
-    name: 'Марко Марковић',
-    number: '+381 617654321'
-  },
-  {
-    name: 'Јован Јовановић',
-    number: '+381 621122123'
-  },
-  {
-    name: 'Петар Јовановић',
-    number: '+381 641234567'
-  },
-  {
-    name: 'Марко Јовановић',
-    number: '+381 617654321'
-  },
-  {
-    name: 'Јован Петровић',
-    number: '+381 621122123'
-  },
-]
+// const data = [
+//   {
+//     name: 'Петар Петровић',
+//     number: '+381 641234567'
+//   },
+//   {
+//     name: 'Марко Марковић',
+//     number: '+381 617654321'
+//   },
+//   {
+//     name: 'Јован Јовановић',
+//     number: '+381 621122123'
+//   },
+//   {
+//     name: 'Петар Јовановић',
+//     number: '+381 641234567'
+//   },
+//   {
+//     name: 'Марко Јовановић',
+//     number: '+381 617654321'
+//   },
+//   {
+//     name: 'Јован Петровић',
+//     number: '+381 621122123'
+//   },
+// ]
 
 export const Content = () => {
-  const [users, setUsers] = useState(data);
+  const [users, setUsers] = useState([]);
   const [tmpUsers, setTmpUsers] = useState(users);
   
   const updateUsers = (user) => {
