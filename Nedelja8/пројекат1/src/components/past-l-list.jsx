@@ -5,7 +5,7 @@ import { DataYearFilter } from './data-year-filter';
 
 export const PastLList = (props) => {
     const [data, setData] = useState([]);
-    const [yearRange, setYearRange] = useState([2000, 2019]);
+    const [yearRange, setYearRange] = useState([2019, 2019]);
     const [displayData, setDisplayData] = useState([]);
 
     
