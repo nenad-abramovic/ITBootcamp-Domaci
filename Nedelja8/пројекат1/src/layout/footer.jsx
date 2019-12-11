@@ -16,7 +16,6 @@ export const Footer = () => {
             <label>Orbit type: {data.orbit_type}</label>
             <br />
             <label>{data.details}</label>
-            <br />
         </footer>
     );
 }

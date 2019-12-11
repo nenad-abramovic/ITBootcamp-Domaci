@@ -12,11 +12,13 @@ export const InfoDisplay = () => {
   return (
     <>
       <h1>{info.name}</h1>
+      <div className="info">
       <label>Year founded: {info.founded}</label>
       <label>Founder: {info.founder}</label>
       <label>CEO: {info.ceo}</label>
       <br />
       <label>{info.summary}</label>
+      </div>
     </>
   );
 }
