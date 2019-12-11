@@ -1,7 +1,7 @@
  body {
-  color: whitesmoke;
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,1) 100%);
+  color: wheat;
+  background: rgb(78, 77, 77);
+  /* background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,1) 100%); */
   text-align: center;
 }
 .link {
@@ -10,7 +10,7 @@
   background-color: rgba(245, 245, 245, 0.452);
   border-radius: 20px;
   margin-right: 20px;
-  color: white;
+  color: wheat;
   text-decoration: none;
   border: 1px solid wheat;
   box-shadow: 1px 1px 5px rgba(245, 245, 245, 0.24);
