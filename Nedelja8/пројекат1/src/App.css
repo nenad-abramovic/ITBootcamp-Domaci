@@ -15,7 +15,6 @@
   border: 1px solid wheat;
   box-shadow: 1px 1px 5px rgba(245, 245, 245, 0.24);
   width: 200px;
-  text-align: center;
 }
 
 .link:hover {
@@ -33,41 +32,74 @@ img {
 header, footer, main {
   width: 900px;
   margin: auto;
+  text-align: center;
 }
 
-header, footer {
-  height: 25vh;
-}
 header {
   height: 18vh;
 }
 
+footer {
+  height: 20vh;
+}
+
 h1 {
   padding: 0;
-  margin: 0;
+  margin: 10px;
+}
+label {
+  margin: 20px;
+}
+hr {
+  width: 900px;
+  margin: 5px auto;
 }
 
 .l-list {
-  height: calc(100vh - 50vh);
+  height: calc(100vh - 54vh);
   overflow-y: auto;
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(34,193,195,1) 100%);
+  background-color: rgba(0, 0, 0, 0.411);
+  border-radius: 20px;
+  width: 900px;
+  margin: auto;
 }
 
 .launch {
-  width: 200px;
+  width: 422px;
   float: left;
   padding: 5px;
-  height: 200px;
+  height: 120px;
   border: 1px solid whitesmoke;
   border-radius: 20px;
   margin: 5px;
+  position: relative;
 }
 
 img {
-  float: left;
+  position: absolute;
+  top: 5%;
+  left: 5px;
+  height: 90%;
 }
-label {
-  display: block;
-  float: right;
+
+.mission-name {
+  position: absolute;
+  top: 10px;
+  left: 120px;
+}
+
+.rocket-name {
+  position: absolute;
+  top: 50px;
+  left: 120px;
+}
+
+.mission-date {
+  position: absolute;
+  top: 50px;
+  left: 240px;
+}
+
+br {
+  margin-top: 5px;
 }

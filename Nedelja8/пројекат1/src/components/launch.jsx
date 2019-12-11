@@ -15,15 +15,13 @@ export const Launch = (props) => {
 
     return (
         <div className="launch">
-            <label>{m_name}</label>
+            <label className="mission-name">{m_name}</label>
             <br />
-            <img src={m_patch === null ? 'https://camo.githubusercontent.com/c565a964982ae51544b3b2b8fd032f3797531fc2/687474703a2f2f692e696d6775722e636f6d2f654c37334969742e706e67' : m_patch } alt="mission patch" className="mission-logo" />
+            <img className="mission-patch" src={m_patch === null ? 'https://camo.githubusercontent.com/c565a964982ae51544b3b2b8fd032f3797531fc2/687474703a2f2f692e696d6775722e636f6d2f654c37334969742e706e67' : m_patch } alt="mission patch" className="mission-logo" />
             <br />
-            
-            <label>{getSerbianDate(date)}</label>
+            <label className="mission-date">{getSerbianDate(date)}</label>
             <br />
-
-            <label>{r_name}</label>
+            <label className="rocket-name">{r_name}</label>
         </div>
     );
 }
