@@ -64,13 +64,13 @@ export const Content = () => {
         <UserList users={users} search={search} />
         <Container style={{
           textAlign: 'center',
-          width: '100%'
+          width: '100%',
+          paddingTop: '15px'
         }}>
           <TextField
             variant="outlined"
             id="search"
             label="Тражи корисника..."
-            size="small"
             value={search}
             onChange={e => setSearch(e.target.value)}
           />
