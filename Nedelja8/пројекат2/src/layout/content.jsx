@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { InputForm } from '../components/input-form';
 import { UserList } from '../components/user-list';
+import { Grid, Paper, TextField, Container } from '@material-ui/core';
 
 /* const data = [
   {
@@ -32,33 +33,49 @@ import { UserList } from '../components/user-list';
 export const Content = () => {
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState('');
-  
+
   const updateUsers = (user) => {
     let currentUser = users.find(u => u.name === user.name);
-    if(currentUser !== undefined) {
-      if(window.confirm('Да ли желимо да заменимо број телефона новим бројем?')) {
+    if (currentUser !== undefined) {
+      if (window.confirm('Да ли желимо да заменимо број телефона новим бројем?')) {
         let tmp = [...users];
         tmp[tmp.indexOf(currentUser)] = user;
         setUsers(tmp);
       }
     } else {
       let tmp = [...users];
-        tmp.push(user);
-        setUsers(tmp);
+      tmp.push(user);
+      setUsers(tmp);
     }
   }
 
- 
-
   return (
-    <main>
-      <InputForm updateUsers={updateUsers} />
-      <UserList users={users} search={search} />
-      <input 
-        type="search" 
-        placeholder="Тражи корисника..."
-        value={search} 
-        onChange={e => setSearch(e.target.value)} />
-    </main>
+    <Grid
+      item
+      xs={10} sm={6} md={4} lg={3} xl={2}
+      container
+      direction="column"
+      justify="flex-start"
+      alignItems="center"
+      style={{ marginTop: '100px' }}
+    >
+      <Paper style={{ width: '100%', padding: '15px' }}>
+        <InputForm updateUsers={updateUsers} />
+        <UserList users={users} search={search} />
+        <Container style={{
+          textAlign: 'center',
+          width: '100%'
+        }}>
+          <TextField
+            variant="outlined"
+            id="search"
+            label="Тражи корисника..."
+            size="small"
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+          />
+        </Container>
+      </Paper>
+    </Grid>
   );
 }
